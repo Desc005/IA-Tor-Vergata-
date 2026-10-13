@@ -30,7 +30,7 @@ class IllegalMove(Exception):
 @dataclass(frozen=True)
 class GameState:
     """Everything a strategy can see on its turn."""
-    maze: Maze
+    maze: Maze.Maze
     knight: tuple            # (row, col)
     dragon: tuple
     goal: tuple              # the cell to reach
