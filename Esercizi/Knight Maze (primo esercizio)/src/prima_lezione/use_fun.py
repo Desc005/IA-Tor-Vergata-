@@ -31,9 +31,9 @@ def make_game(knight, dragon, **settings):
     cfg = {**CONFIG, **settings}
     maze = make_maze(cfg["size"], cfg["walls"], cfg["density"], cfg["seed"])
     return Game.Game(maze, as_strategy(knight, "knight"), as_strategy(dragon, "dragon"),
-                knight_start=cfg["knight_start"], dragon_start=cfg["dragon_start"],
-                goal=cfg["goal"], max_turns=cfg["max_turns"],
-                dragon_every=cfg["dragon_every"], allow_stay=cfg["allow_stay"])
+                     knight_start=cfg["knight_start"], dragon_start=cfg["dragon_start"],
+                     goal=cfg["goal"], max_turns=cfg["max_turns"],
+                     dragon_every=cfg["dragon_every"], allow_stay=cfg["allow_stay"])
 
 
 def _drawer(game):
